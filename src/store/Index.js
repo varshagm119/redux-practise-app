@@ -1,4 +1,4 @@
-import redux from 'redux';
+import {configureStore} from '@reduxjs/toolkit';
 
 const counterReducer = (state = {counter: 0}, action) => {
     if(action.type === 'increment'){
@@ -16,6 +16,6 @@ const counterReducer = (state = {counter: 0}, action) => {
     return state
 }
 
-const store = redux.configureStore(counterReducer);
+const store = configureStore(counterReducer);
 
 export default store;
